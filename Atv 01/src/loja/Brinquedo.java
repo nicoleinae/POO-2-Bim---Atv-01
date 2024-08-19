@@ -16,14 +16,15 @@ public class Brinquedo {
 	public String getFaixaEtaria() {
 		return faixaEtaria;
 	}
-	public void setFaixaEtaria(String faixaEtaria) {
-		if (faixaEtaria.equals("0 a 2") || faixaEtaria.equals("3 a 5") || faixaEtaria.equals("6 a 10") || faixaEtaria.equals("acima de 10")) {
-            this.faixaEtaria = faixaEtaria;
-        } else {
-            System.out.println("Faixa etária inválida");
-            }
-	}
-
+	public boolean setFaixaEtaria(String faixaEtaria) {
+		if (faixaEtaria.equals("0 a 2") || faixaEtaria.equals("3 a 5") || 
+	            faixaEtaria.equals("6 a 10") || faixaEtaria.equals("acima de 10")) {
+	            this.faixaEtaria = faixaEtaria;
+	            return true; 
+	        } else {
+	            return false;
+	        }
+        }
 	public float getPreco() {
 		return preco;
 	}
